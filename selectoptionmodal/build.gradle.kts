@@ -28,7 +28,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         viewBinding = true
@@ -40,7 +40,7 @@ publishing {
         create<MavenPublication>("release") {
             groupId = "com.github.indogusmas"
             artifactId = "selectoptionmodal"
-            version = "0.0.1"
+            version = "0.0.2"
 
             afterEvaluate {
                 from(components["release"])
