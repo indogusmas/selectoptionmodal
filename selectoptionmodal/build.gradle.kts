@@ -41,7 +41,7 @@ publishing {
         create<MavenPublication>("release") {
             groupId = "com.github.indogusmas"
             artifactId = "selectoptionmodal"
-            version = "0.0.5"
+            version = "0.0.6"
 
             afterEvaluate {
                 from(components["release"])
