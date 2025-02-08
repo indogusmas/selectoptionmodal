@@ -20,8 +20,16 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         findViewById<Button>(R.id.btn_show).setOnClickListener {
+            var list : MutableList<String> = mutableListOf()
+            for (i in 1..10){
+                list.add("Pilihan${i}")
+            }
+            for (j in 1..10){
+                list.add("Select${j}")
+            }
+
             val dialog = SelectDialogView.Builder<String>()
-                .setItems(listOf("Item 1", "Item 2", "Item 3"))
+                .setItems(list)
                 .setTitle("Select Your Option")
                 .setOnItemSelected { selected ->
                     Toast.makeText(this,"${selected}",Toast.LENGTH_LONG).show()
